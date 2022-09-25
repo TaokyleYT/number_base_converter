@@ -1,12 +1,6 @@
-import sqlite3
 from os import system as sys, name as user
 #base convertion program starts here
 import math
-def log(data):
-  con=sqlite3.connect("NumberBaseConverterLoggingGithub.db")
-  cur = con.cursor()
-  cur.execute("INSERT INTO logging VALUES(?)", data)
-  con.commit() 
 def _base(num, Obase, Nbase):
   neg=False
   if num<0:
@@ -30,8 +24,7 @@ def _base(num, Obase, Nbase):
   else:
     returnNum=returnNum/corr
   if debug:
-    numSaver.append("DEBUG MODE ON\n"+f"number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}\nDEBUG MODE ON")   
-  log(f"MaxBase10=True, number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}")
+    numSaver.append("DEBUG MODE ON\n"+f"number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}\nDEBUG MODE ON")
   return returnNum
 #base convertion program ends here. Code below is the interactive section, using but not continuing the base convertion program.
 numSaver=[]
@@ -57,7 +50,6 @@ def Convert():
   print(tempNum)
   if not debug:
     numSaver.append(f"Inputted number: {str(number)}, inputted number's base: {str(base1)}, targeted number's base: {str(base2)}, result: {str(tempNum)}")
-print('This message will not show again.\nWe are using logging currenly and we will save the data to cloud. Visit the code and delete the "#" part of the code to disable the logging to cloud system.')
 Convert()
 cont=''
 while cont!='Y' or cont!='N':
