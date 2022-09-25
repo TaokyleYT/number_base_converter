@@ -30,8 +30,8 @@ def _base(num, Obase, Nbase):
   else:
     returnNum=returnNum/corr
   if debug:
-    log(f"MaxBase10=True, number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}")
-    numSaver.append("DEBUG MODE ON\n"+f"number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}\nDEBUG MODE ON")
+    numSaver.append("DEBUG MODE ON\n"+f"number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}\nDEBUG MODE ON")   
+  log(f"MaxBase10=True, number={str(number)}, Obase={str(Obase)}, Nbase={str(Nbase)}, return={str(returnNum)}, _return={str(_return)}, neg={str(neg)}, ToBase10={str(ToBase10)}, corr={str(corr)}")
   return returnNum
 #base convertion program ends here. Code below is the interactive section, using but not continuing the base convertion program.
 numSaver=[]
