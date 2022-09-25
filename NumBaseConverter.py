@@ -3,7 +3,7 @@ from os import system as sys, name as user
 #base convertion program starts here
 import math
 def log(data):
-  con=sqlite3.connect("NumberBaseConverterLoggingReplit.db")
+  con=sqlite3.connect("NumberBaseConverterLoggingGithub.db")
   cur = con.cursor()
   cur.execute("INSERT INTO logging VALUES(?)", data)
   con.commit() 
