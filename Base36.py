@@ -22,7 +22,7 @@ def intToBases(num, Nbase):
 
 
 def convert(num, Obase, Nbase, corr=None):
-    num=num.replace(' ', '')
+    num = num.replace(' ', '')
     inti, pt, fra = num.strip().partition('.')
     num1 = int(inti + fra, Obase) * Obase**-len(fra)
     corr = len(fra) if corr is None else corr
@@ -46,6 +46,8 @@ def Hist():
     for printxt in numSaver:
         print(printxt)
         print('-----')
+
+
 def ConProg():
     global debug
     global number
@@ -71,9 +73,11 @@ def ConProg():
         numSaver.append(
             f"Inputted number: {str(number)}, inputted number's base: {str(base1)}, targeted number's base: {str(base2)}, result: {str(tempNum)}"
         )
+
+
 ConProg()
 cont = ''
-while cont != 'Y' or cont != 'N' or cont!='C':
+while cont != 'Y' or cont != 'N' or cont != 'C':
     cont = ''
     cont = input(
         "Convert another number's base? Please input Y or N, or C to clear history and convert another number's base: "
@@ -83,15 +87,15 @@ while cont != 'Y' or cont != 'N' or cont!='C':
     elif cont == 'C':
         numSaver = []
         if user == 'nt':
-          _ = sys('cls')
+            _ = sys('cls')
         else:
-          _ = sys('clear')
+            _ = sys('clear')
         ConProg()
     elif cont == 'Y':
         if user == 'nt':
-          _ = sys('cls')
+            _ = sys('cls')
         else:
-          _ = sys('clear')
+            _ = sys('clear')
         Hist()
         ConProg()
     else:
